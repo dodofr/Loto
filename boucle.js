@@ -9,13 +9,13 @@ const bru = document.getElementById("numberRandom");
 const message = document.getElementById("message");
 
 btnrandom.addEventListener("click", () => {
-  bru.innerText = "";                        // POUR CLEAN 
-  talk.innerText = "";
-  nbvalid.innerText = "";
-  message.innerText = ""
-  TabChoix = []
-  win = []
-  randomnumeros = [];
+  // bru.innerText = "";                        // POUR CLEAN 
+  // talk.innerText = "";
+  // nbvalid.innerText = "";    a voir si je le mets
+  // message.innerText = ""
+  // TabChoix = []
+  // win = []
+  // randomnumeros = [];
   while (randomnumeros.length < 5) {
     let random = getRandomInt(50);
 
