@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loto.css">
+    <title>Document</title>
+</head>
+<body>
+<h1>Toujours gagnant au Loto !</h1>
+
+<h2> Choissisez vos numeros</h2>
+<div class="grid">
+<form>
+<input type="number" id="number1"  min="0" max="50" required>
+<input type="number" id="number2"  min="0" max="50" required>
+<input type="number" id="number3"  min="0" max="50" required>
+<input type="number" id="number4"  min="0" max="50" required>
+<input type="number" id="number5"  min="0" max="50" required>
+<button id="btnchoix">valider</button>
+</form>
+</div>
+<p id="numberValid"></p>
+<div>
+<button id="lancerResult" >Lancer le tirage</button>
+</div>
+<h3 id="numberRandom"></h3>
+<h3 id="message"></h3>
+<h3 id="talk"></h3>
+<script src="boucle.js"></script>    
+</body>
+</html>
