@@ -1,6 +1,7 @@
 // tableau random
 let randomnumeros = [];
-
+let imgtabL = ["image/loose.jpg","image/loo.jpg","image/luu.jpg","image/laa.gif"]
+let imgtab = ["image/mouais-meh.gif"]
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
@@ -28,19 +29,19 @@ btnrandom.addEventListener("click", () => {
   }
   if (randomnumeros.length == 5) {                     // quand il atteint la taille de 5 il arrete sa boucle 
     setTimeout(() => {
-      bru.innerHTML += "" + randomnumeros[0]            // va mettre un peu de temps a afficher le premier numero tiré 
+      bru.innerHTML += " " + randomnumeros[0]         // va mettre un peu de temps a afficher le premier numero tiré 
     }, 5);
     setTimeout(() => {
-      bru.innerHTML += "////" + randomnumeros[1]
+      bru.innerHTML += " " + randomnumeros[1]
     }, 500);
     setTimeout(() => {
-      bru.innerHTML += "////" + randomnumeros[2]
+      bru.innerHTML += " " + randomnumeros[2] 
     }, 1000);
     setTimeout(() => {
-      bru.innerHTML += "////" + randomnumeros[3]
+      bru.innerHTML += " " + randomnumeros[3] 
     }, 1500);
     setTimeout(() => {
-      bru.innerHTML += "////" + randomnumeros[4]
+      bru.innerHTML += " " + randomnumeros[4] 
     }, 2000);
     setTimeout(() => {
       // push des a pour pouvoir afficher un score 
@@ -55,7 +56,7 @@ btnrandom.addEventListener("click", () => {
       // tentative afficher un message en fonction du score
       if (win.length === 1) {
         console.log(win)
-        talk.innerHTML = "c'est deja bien "
+        talk.innerHTML = `<img src= ${imgtab[0]}>` 
         console.log("deja bien")
       }
 
@@ -72,7 +73,7 @@ btnrandom.addEventListener("click", () => {
         talk.innerHTML = "CHAMPION"
       }
       if (win.length === 0) {
-        talk.innerHTML = "Nul"
+        talk.innerHTML = `<img src= ${imgtabL[getRandomInt(4)]}>`
       }
 
       // fin de tentative //
@@ -115,7 +116,7 @@ choix.addEventListener("click", (e) => {
       TabChoix = []
       return;
     } else {
-      nbvalid.innerText = "Vos choix" + TabChoix;   // affiche le choix des joueurs
+      nbvalid.innerText = "Vos choix" +" "+ TabChoix.join(" ");   // affiche le choix des joueurs
     }
   })
 })
