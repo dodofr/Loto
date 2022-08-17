@@ -1,6 +1,6 @@
 // tableau random
 let randomnumeros = [];
-let imgtabL = ["image/loose.jpg","image/loo.jpg","image/luu.jpg","image/laa.gif"]
+let imgtabL = ["image/lb.gif","image/tl.gif","image/trumpl.gif","image/laa.gif","image/lp.gif"]
 let imgtab = ["image/mouais-meh.gif"]
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
@@ -73,7 +73,7 @@ btnrandom.addEventListener("click", () => {
         talk.innerHTML = "CHAMPION"
       }
       if (win.length === 0) {
-        talk.innerHTML = `<img src= ${imgtabL[getRandomInt(4)]}>`
+        talk.innerHTML = `<img src= ${imgtabL[getRandomInt(5)]}>`
       }
 
       // fin de tentative //
