@@ -9,18 +9,18 @@ const bru = document.getElementById("numberRandom");
 const message = document.getElementById("message");
 
 btnrandom.addEventListener("click", () => {
-  // bru.innerText = "";                        // POUR CLEAN 
-  // talk.innerText = "";
+  bru.innerText = "";                        // POUR CLEAN 
+  talk.innerText = "";
   // nbvalid.innerText = "";    a voir si je le mets
-  // message.innerText = ""
+  message.innerText = ""
   // TabChoix = []
-  // win = []
-  // randomnumeros = [];
+  win = []
+  randomnumeros = [];
   while (randomnumeros.length < 5) {
     let random = getRandomInt(50);
 
     if (randomnumeros.includes(random)) {    // si c'est vrai qu'il y a deux numeros identiques alors il fait l'alerte
-      alert("meme numero")
+      // alert("meme numero")
     }
     if (randomnumeros.includes(random) === false) { // si pas identique alors il push dans le tableau random
       randomnumeros.push(random);
