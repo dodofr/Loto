@@ -1,6 +1,18 @@
+fetch ("https://tenor.googleapis.com/v2/search?key=AIzaSyAVpVVTmWXqZnBvf1vFJbxh2Wi3Q4SLThg&q=loosers&random=true&limit=50") /// API
+    .then(reponse => reponse.json())                              // double then que j'ai pas bien saissi 
+    .then((picture) =>{
+      for (let i = 0; i < 50; i++) {                               // boucle pour push dans un tableau et cree le random plus bas
+        imgtabL.push(picture.results[i].media_formats.gif.url)     // recuperer le gif en url 
+      console.log(picture.results[i].media_formats.gif.url)
+      }
+     
+       })
+
+
+
 // tableau random
 let randomnumeros = [];
-let imgtabL = ["image/lb.gif","image/tl.gif","image/trumpl.gif","image/laa.gif","image/lp.gif"]
+let imgtabL = []
 let imgtab = ["image/mouais-meh.gif"]
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
@@ -73,7 +85,8 @@ btnrandom.addEventListener("click", () => {
         talk.innerHTML = "CHAMPION"
       }
       if (win.length === 0) {
-        talk.innerHTML = `<img src= ${imgtabL[getRandomInt(5)]}>`
+      
+        talk.innerHTML = `<img src= ${imgtabL[getRandomInt(50)]}>`   // grace a l'API
       }
 
       // fin de tentative //
@@ -121,3 +134,10 @@ choix.addEventListener("click", (e) => {
   })
 })
 
+fetch ("https://tenor.googleapis.com/v2/search?key=AIzaSyAVpVVTmWXqZnBvf1vFJbxh2Wi3Q4SLThg&q=loosers&random=true&limit=1")
+    .then(reponse => reponse.json())
+    .then((picture) =>{
+      imgtabL.push(picture.results[0].media_formats.gif.url)
+      console.log(picture.results[0].media_formats.gif.url)
+       })
+    
